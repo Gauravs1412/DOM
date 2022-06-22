@@ -21,4 +21,16 @@ let header = document.getElementById("main-header")
 
 header.style.borderBottom = "solid 3px #000";
 
-var item = document.getElementsByClassName("title")
+var items = document.getElementsByClassName("list-group-item");
+console.log(items);
+
+items[2].style.backgroundColor = "green";
+
+//gives an error need to loop through the list
+//items.style.fontWeight = "bold";
+
+for(let i=1; i<items.length; i++){
+    items[i].style.fontWeight = "bold";
+}
+
+
