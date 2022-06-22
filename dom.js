@@ -34,3 +34,14 @@ for(let i=1; i<items.length; i++){
 }
 
 
+
+//getElementbytagName
+
+var li = document.getElementsByTagName("li")
+console.log(li);
+//it takes all the li tags from the file
+for(let i=0; i<li.length; i++){
+    li[i].style.backgroundColor = "grey";
+}
+
+
