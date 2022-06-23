@@ -65,15 +65,105 @@
 
 //queryselectorAll
 
-var titles = document.querySelectorAll('.title');
-console.log(titles);
+// var titles = document.querySelectorAll('.title');
+// console.log(titles);
 
-titles[1].style.color = "blue";
+// titles[1].style.color = "blue";
 
-var odd = document.querySelectorAll('li:nth-child(odd)');
-for(let i=0; i<odd.length; i++){
-    odd[i].style.backgroundColor = "green"
-}
+// var odd = document.querySelectorAll('li:nth-child(odd)');
+// for(let i=0; i<odd.length; i++){
+//     odd[i].style.backgroundColor = "green"
+// }
+
+
+
+// //parentNode
+// var itemlist = document.querySelector('#items')
+// // console.log(itemlist.parentNode);
+// // itemlist.parentNode.style.backgroundColor = '#f4f4f4';
+// // console.log(itemlist.parentNode.parentNode.parentNode);
+
+// //parentelement is same as parentNode
+
+
+// //childNodes
+// // console.log(itemlist.childNodes);
+// //it has a downside that it shows all the spaces between li tags as text.so we oftenly use children property
+
+
+// //children
+// console.log(itemlist.children);
+// itemlist.children[1].style.backgroundColor = "yellow";
+
+// //firstChild is also give you all the spaces so it could be of no use to us.
+
+// console.log(itemlist.firstChild);
+
+// //firstelementChild
+
+// console.log(itemlist.firstElementChild);
+// itemlist.firstElementChild.textContent = "Hello 1";
+
+// //same goes for lastchild and lastElementChild
+
+
+// //nextSibling it works same as firstchild
+
+// console.log(itemlist.nextSibling);
+
+// //nextElementSibling
+
+// console.log(itemlist.nextElementSibling);
+
+// //previousSibling same gives us text.
+// console.log(itemlist.previousSibling);
+// //previousElementSibling
+// console.log(itemlist.previousElementSibling);
+
+
+//create Element
+
+var newDiv = document.createElement('div');
+
+//add class
+
+newDiv.className = "Hello";
+
+//add id
+
+newDiv.id = "Hello 1";
+
+//set attribute
+
+newDiv.setAttribute('title', 'Hello World');
+
+//create textNode
+
+var newDivtext = document.createTextNode('Hello World');
+
+newDiv.appendChild(newDivtext);
+
+var container = document.querySelector('header .container')
+var h1 = document.querySelector('header h1');
+
+container.insertBefore(newDiv,h1);
+
+// inserting newElement
+var newli = document.createElement('li');
+console.log(newli);
+
+var newlitext = document.createTextNode('Hello World');
+
+newli.appendChild(newlitext);
+
+var parentnode = document.getElementById('items') 
+
+// console.log(parentnode);
+
+console.log(parentnode.innerhtml);
+
+
+
 
 
 
