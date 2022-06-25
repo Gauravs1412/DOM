@@ -1,8 +1,9 @@
 
 
-function saveData(){
-let name = document.getElementById('name').value;
-let Email = document.getElementById('email').value;
+function saveData(event){
+event.preventDefault() ;   
+let name = event.target.username.value;
+let Email = event.target.emailId.value;
 
 // localStorage.setItem("name", name);
 // localStorage.setItem("email", Email);
@@ -12,7 +13,23 @@ let myObj= {
     Email
 }
 
-localStorage.setItem("userDetails",JSON.stringify(myObj));
+localStorage.setItem(myObj.Email,JSON.stringify(myObj));
+
+showUsersOnScreen(myObj);
 }
+
+function showUsersOnScreen(user){
+    const parentNode = document.getElementById('users');
+    const childHTML = `<li> ${user.name} - ${user.Email}`
+    parentNode.innerHTML = parentNode.innerHTML + childHTML;
+}
+
+
+        
+        
+
+
+
+
 
 
